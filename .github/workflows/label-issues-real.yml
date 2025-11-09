@@ -9,8 +9,6 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Output issue title
-        run: echo "Issue title ${{ github.event.issue.title }}"
       - name: Assign label
         if: contains(github.event.issue.title, 'bug')
         run: |
